@@ -1,4 +1,4 @@
-# VMWare Fusion Control Tool
+# VMWare Fusion Control Tool (开发中...)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
 方面快捷的通过命令行控制VMWare Fusion的虚拟机
