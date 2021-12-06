@@ -1,7 +1,20 @@
-import sys
 import os
-import json
+from vm import VM
+from config import CONFIGS
 
-with open('config.json') as f:
-    j_data = json.load(f)
-    print(j_data['vm_dir'])
+
+def fetch_all_vms():
+    """
+    :return: all of vm instances
+    """
+
+    vms = []
+    chlidren_dirs = os.listdir(CONFIGS['vm_dir'])
+    for child in chlidren_dirs:
+        if child.endswith(CONFIGS['postfix_vm']):
+            vms.append(VM(child))
+    return vms
+
+
+# Test
+print(fetch_all_vms())
