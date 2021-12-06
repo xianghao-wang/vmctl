@@ -43,7 +43,7 @@ class VM:
         """
 
         op = 'gui' if gui else 'nogui'
-        os.popen('vmrun start ' + self.get_path() + ' '  + op)
+        os.popen('vmrun start ' + self.path() + ' ' + op)
 
     def stop(self, soft):
         """
@@ -52,4 +52,4 @@ class VM:
         """
 
         op = 'soft' if soft else 'hard'
-        os.popen('vmrun stop ' + self.get_path() + ' ' + op)
+        os.popen('vmrun stop ' + self.path() + ' ' + op)
